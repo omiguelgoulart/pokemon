@@ -1,51 +1,20 @@
-/**interface Pessoa <Profissao> {
-    nome: string;
-    idade: number;
-    profissao: Profissao;
-}
-
-interface Aluno {
-    ra: string;
-}
-
-interface Engenheiro {
-    crea: string;
-}
-
-interface Medico {
-    crm: string;
-}
-
-let medico: Pessoa<Medico>;
-let aluno: Pessoa<Aluno>
-let engenheiro: Pessoa<Engenheiro>
-
-medico = {
-    nome: 'João',
-    idade: 50,
-    profissao: {crm: "2846394"}
-}*/
-
-/**depois de instalar o prompt-sync deve digitar o seguinte comando: npm i @types/prompt-sync -D */
-
-
-    
-
-import prompt from 'prompt-sync'
+import prompt from 'prompt-sync';
+import { DomesticoFM } from './DomesticoFM';
+import { SelvagemFM } from './SelvagemFM';
 import { Pokemon } from './Pokemon';
-import { Selvagem } from './Selvagem';
-import { Domestico } from './Domestico';
-
-let selvagem: Pokemon = new Selvagem("Fogo","Charmander", 100, 0, 0)
-let domestico: Pokemon = new Domestico("Elétrico","Pikachu", 100, 0, 0)
-
-
-console.log(selvagem.atacar());
-console.log(domestico.defender());
-
 
 let teclado = prompt();
 let option: number = 0;
+
+const domesticoFactory = new DomesticoFM("Ash Ketchum");
+const selvagemFactory = new SelvagemFM("Kanto");
+
+const selvagem: Pokemon = selvagemFactory.criarPokemon("Charmander", 100, 50, 40);
+const domestico: Pokemon = domesticoFactory.criarPokemon("Pikachu", 100, 60, 30);
+
+console.log(`Selvagem criado: ${selvagem.nome}`);
+console.log(`Doméstico criado: ${domestico.nome}`);
+
 
 while (option != 9) {
     console.log(`+== Pokemon ${selvagem.nome} ==+`)
@@ -74,7 +43,6 @@ while (option != 9) {
                     option = 9
                     break
                 }
-                console.log(selvagem.status())
             case 3:
                 console.log(selvagem.status())
                 break;
