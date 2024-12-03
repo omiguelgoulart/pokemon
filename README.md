@@ -14,6 +14,14 @@ Bem-vindo ao **Pokémon Battle Simulator**, um projeto desenvolvido em **TypeScr
 
 ---
 
+## Vídeo Explicativo
+
+Assista ao vídeo no YouTube que explica o conceito dos padrões de design aplicados no projeto:
+
+[![Vídeo Explicativo](https://img.youtube.com/vi/6kg19F4LGdI/0.jpg)](https://www.youtube.com/watch?v=6kg19F4LGdI&ab_channel=MiguelGoulart)
+
+---
+
 ## Padrões de Design Criacionais
 
 ### 1. Prototype
@@ -86,6 +94,8 @@ console.log(domestico.status());
 - Melhora a organização e modularidade.
 
 ---
+
+
 
 ## Comparação Entre os Padrões
 
