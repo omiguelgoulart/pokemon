@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@types/prompt-sync": "^4.2.3",
+    "prompt-sync": "^4.2.0"
+  },
+  "scripts": {
+    "dev": "ts-node Main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1"
+  }
+}
