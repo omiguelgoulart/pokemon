@@ -1,0 +1,15 @@
+export class SelvagemPokemonFactory implements PokemonFactory {
+  criarPokemon(
+    nome: string,
+    vida: number,
+    ataque: number,
+    defesa: number,
+    habilidadeEspecial?: string
+  ): Selvagem {
+    const pokemon = new Selvagem("Fogo", nome, vida, ataque, defesa);
+    if (habilidadeEspecial) {
+      pokemon.habilidadeEspecial = habilidadeEspecial;
+    }
+    return pokemon;
+  }
+}
